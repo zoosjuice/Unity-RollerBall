@@ -40,8 +40,8 @@ namespace UnityStandardAssets.Vehicles.Ball
         {
             // Get the axis and jump input.
 
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+			float h = Input.acceleration.x * 10.0f;
+			float v = Input.acceleration.y * 10.0f;
             jump = CrossPlatformInputManager.GetButton("Jump");
 
             // calculate move direction
